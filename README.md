@@ -1,4 +1,4 @@
-# 🗳️ BlockVote ##  Blockchain-Based E-Voting System
+# 🗳️ BlockVote - Blockchain-Based E-Voting System
 *Tamper-proof voting. Powered by Blockchain.*
 
  
