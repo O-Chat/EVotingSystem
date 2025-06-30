@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const cors = require('cors'); 
 
 //load env variables
 dotenv.config();
@@ -11,13 +12,15 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 5050;
 
+// ✅ CORS middleware
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
+
+
 //MIDDLEWARE FOR JSON Parsing
 app.use(express.json());
-// app.use((req, res, next) => {
-//   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}  BODY:`, req.body);
-//   next();
-// });
-
 
 //POST ROUTES
 app.use('/api/auth', require('./routes/auth'));

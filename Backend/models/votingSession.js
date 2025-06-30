@@ -8,6 +8,15 @@ const candidateSchema = new mongoose.Schema({
     }
 });
 
+const blockSchema = new mongoose.Schema({
+  index:         Number,
+  previousHash:  String,
+  timestamp:     Date,
+  data:          Object,
+  hash:          String
+}, { _id: false });           // makes sub‑docs lean
+
+
 const votingSessionSchema = new mongoose.Schema({
     //Title of the Voting
     title: { type: String, required: true },
@@ -25,6 +34,7 @@ const votingSessionSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
+     blockchain:  { type: [blockSchema], default: [] }
 });
 module.exports = mongoose.model('VotingSession', votingSessionSchema);
