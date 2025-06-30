@@ -1,7 +1,7 @@
-# BlockVote
+# 🗳️ BlockVote ##  Blockchain-Based E-Voting System
 *Tamper-proof voting. Powered by Blockchain.*
 
- ##  Blockchain-Based E-Voting System
+ 
 
 A secure and decentralized web application that enables online voting using blockchain technology to ensure transparency, tamper-resistance, and trust. Built with a full-stack architecture using **React**, **Node.js**, **MongoDB**, and **JWT-based authentication**.
 
